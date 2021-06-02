@@ -1,0 +1,1019 @@
+{
+  "settings": {
+    "name": "serra madre seguranca",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#481291",
+        "#18adff"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.12.3",
+    "siteFonts": [
+      {
+        "css": "'Rubik', sans-serif",
+        "name": "Rubik",
+        "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "uniqCompNum": 21,
+    "versionPublish": "4.12.3",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-figure": {
+              "margin": "0 auto",
+              "width": "100%",
+              "display": "-webkit-flex",
+              "justify-content": "center",
+              "-webkit-justify-content": "center",
+              "img": {
+                "height": "100%",
+                "margin": "0 auto"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "img": {
+                  "width": "100% !important"
+                }
+              }
+            }
+          },
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"100\" step=\"5\" value=\"40\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/topo.png\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"media-content col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    INTRO WITH IMAGE\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-text align-center mbr-white pb-3\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        Intro with background image, color overlay and a picture at the bottom. Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface.\n                    </p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n            <div class=\"mbr-figure pt-5\">\n                <img src=\"@PROJECT_PATH@/assets/images/selo.png\" alt=\"Mobirise\" mbr-style=\"{'width': mediaSize + '%'}\" title>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5uLHO8a1P",
+          "_anchor": "header4-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "@media (max-width: 991px)": {
+              "img": {
+                "width": "120px",
+                "display": "block",
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "padding-top": "20px",
+                "padding-bottom": "20px"
+              }
+            },
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-right": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#481291",
+              "text-align": "center"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "font-size": "50px",
+              "text-align": "center",
+              "color": "#481291"
+            },
+            "H3": {
+              "font-size": "60px",
+              "text-align": "center",
+              "color": "#f4c521"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"65\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-8\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/selo-turismo.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>PRONTOS PARA</h2><h3>SUA FAMÍLIA</h3>\n                          \n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">A gente cuida de você, para você continuar protegendo todos que são <b>importantes na sua vida!\nConfira algumas de nossas medidas:</b></p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-3",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uOr3wYDx",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/coronavirus.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Uso de máscara</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">É ideal para aproveitar com segurança as dependências do hotel</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-5",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uQi9j2zh",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/temperature.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Medição de temperatura</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Uma medida de prevenção para garantir férias tranquilas</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-6",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uQWICpzU",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/tapete.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Tapete Sanitizante</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Pise com seus calçados aqui e leve a prevenção por onde andar\n</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-7",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uRi5QtnH",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/distance.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Maior distância entre pessoas, mesas e cadeiras</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Além de privacidade, muito mais conforto para todos</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-8",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uRs2OKla",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/product.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Enxoval preparado para você</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Todos os itens do enxoval são esterilizados e ensacados para o seu bem-estar</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-9",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uRBAm458",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/hand-sanitizer.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Dispensers com álcool gel&nbsp;</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Sempre à disposição para fazer\nda sua estadia muito mais segura</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-a",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uRII0x4W",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/hotel.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Limpeza de acomodações \nno check-in e checkout</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Todas as unidades são preparadas da melhor forma para recebê-lo </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-b",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uRQbn0fa",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/protection.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Equipe treinada e pronta para receber sua família</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Todos foram treinados para receber cada vez melhor você e sua família </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-c",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uSfnIgTC",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/ok.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Apartamentos isolados 24h entre hospedagens e utilização</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Cada ambiente é limpo e totalmente seguro para sua família</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-d",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uSroPzfX",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/agua.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Medidas rígidas no tratamento das águas</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Tudo preparado para você curtir nosso lazer sem preocupações </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-e",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uSFjV1Ej",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/drink.png\" alt=\"Mobirise\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Café da manhã servido em ambiente preparado</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Pronto para você começar bem o dia com toda a segurança\n</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-f",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uSMASYGJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when not (@reverseContent)": {
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-right": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".mbr-figure": {
+                  "padding-bottom": "1rem"
+                }
+              }
+            },
+            "& when (@reverseContent)": {
+              ".media-container-row": {
+                "flex-direction": "row-reverse",
+                "-webkit-flex-direction": "row-reverse"
+              },
+              "@media (min-width: 992px)": {
+                ".mbr-figure": {
+                  "padding-left": "4rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                ".media-container-row": {
+                  "flex-wrap": "wrap-reverse",
+                  "-webkit-flex-wrap": "wrap-reverse"
+                },
+                ".mbr-figure": {
+                  "padding-top": "1rem"
+                }
+              }
+            },
+            ".mbr-text": {
+              "color": "#18adff"
+            },
+            "hr": {
+              "border-color": "#53e1ee",
+              "border-bottom": "7px solid #53e1ee",
+              "box-sizing": "border-box",
+              "width": "100%"
+            },
+            "H2": {
+              "color": "#481291"
+            }
+          },
+          "_name": "content6",
+          "_customHTML": "<section class=\"mbr-section content6\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n      <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n      <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\n      <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"200\" step=\"5\" value=\"50\">\n        <input type=\"checkbox\" title=\"Text On Right/Left\" name=\"reverseContent\">  \n      <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"col-12 col-md-6\">\n                <div class=\"media-container-row\">\n                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                      <img src=\"@PROJECT_PATH@/assets/images/hand.png\" height=\"20%\" title>  \n                    </div>\n                    <div class=\"media-content\">\n                        <div class=\"mbr-section-text\">\n                            <h2>Reduzimos alguns ambientes comuns</h2>\n                    <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Tornando a sua estadia mais tranquila e confortável</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "content6-g",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "s5uSXMb6E6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"7\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"7\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/rio-quente.png\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#7f1933\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    FULL WIDTH INTRO\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">\n                        <span class=\"mbr-iconfont mbri-file\"></span>LEARN MORE</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "s5v1NBUA3V",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header1-j"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-figure": {
+              "margin": "0 auto",
+              "width": "100%",
+              "display": "-webkit-flex",
+              "justify-content": "center",
+              "-webkit-justify-content": "center",
+              "img": {
+                "height": "100%",
+                "margin": "0 auto"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-figure": {
+                "img": {
+                  "width": "100% !important"
+                }
+              }
+            }
+          },
+          "_name": "header4",
+          "_customHTML": "<section class=\"header4\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"10\" max=\"100\" step=\"5\" value=\"60\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/bg2.png\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#0f7699\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"media-content col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    INTRO WITH IMAGE\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-white mbr-light pb-3 mbr-fonts-style\" mbr-if=\"showSubTitle\" mbr-theme-style=\"display-2\">\n                    Beautiful mobile websites\n                </h3>\n                <div class=\"mbr-text align-center mbr-white pb-3\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-if=\"showText\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        Intro with background image, color overlay and a picture at the bottom. Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface.\n                    </p>\n                </div>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">LEARN MORE</a></div>\n            </div>\n            <div class=\"mbr-figure pt-5\">\n                <img src=\"@PROJECT_PATH@/assets/images/pacotes.png\" alt=\"Mobirise\" mbr-style=\"{'width': mediaSize + '%'}\" title>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "s5v1Z17JBA",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header4-k"
+        }
+      ]
+    }
+  }
+}
